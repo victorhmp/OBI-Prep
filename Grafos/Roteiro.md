@@ -43,3 +43,41 @@ Agora, para representar as arestas do grafo, existem algumas opções. Cada opç
 ### Matriz de adjacência
 
 Nessa representação, consideramos uma matriz _NxN_, onde _N_ representa o número de vértices no grafo. Cada célula (i, j) da matriz representa uma aresta entre os vértices i e j do grafo.
+
+Para grafos onde as arestas não tem _peso_, usamos a convensão de que `matrix[i][j] = 0` se não existe aresta ligando os vértices i e j, `matrix[i][j] = 1` se existe tal aresta.
+
+Essa representação é talvez a mais simples das três, porém sua complexidade de espaço é a pior, sendo quadrática no número de vértices. Já quanto ao tempo de operações básicas temos inserção e remoção de uma aresta em tempo constante, e consulta dos vizinhos em tempo proporcional ao número de vértices do grafo.
+
+#### Exemplo de implementação
+
+```c++
+#include <iostream>
+#define N 6
+
+using namespace std;
+
+int matrix[N][N];
+
+// Recebe as arestas do grafo e monta a matriz de adjacência
+int main()
+{
+  int num_edges = 0;
+  cin >> num_edges;
+  for (int k = 0; k < num_edges; k++)
+  {
+    int i, j;
+    cin >> i >> j;
+    matrix[i][j] = matrix[j][i] = 1;
+  }
+
+  for (int i = 1; i <= N; i++)
+  {
+    for (int j = 1; j <= N; j++)
+    {
+      cout << matrix[i][j];
+      if (j == N)
+        cout << "\n";
+    }
+  }
+}
+```
