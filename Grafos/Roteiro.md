@@ -81,3 +81,43 @@ int main()
   }
 }
 ```
+
+### Lista de adjacência
+
+Essa é a maneira mais usada de se representar arestas de grafos. Um pouco mais complicada de debugar num primeiro momento, com espaço e tempo otimizados.
+
+Para essa representação guardamos, para cada vértice do grafo, quais são seus vizinhos.
+
+O espaço utilizado por essa implementação é proporcial ao dobro número de arestas que temos no grafo, o que já a torna mais econômica em memória do que a matriz de adjacência. Quanto às operações básicas, podemos inserir uma nova aresta em tempo constante e realizar buscas pelos vizinhos de um vértice em tempo proporcional ao seu grau.
+
+#### Exemplo de implementação
+
+```c++
+#include <iostream>
+#include <vector>
+#define N 6
+
+using namespace std;
+
+vector<int> neighbors[N];
+
+// Recebe as arestas do grafo e monta as listas de adjacência de cada vértice
+int main()
+{
+  int num_edges = 0;
+  cin >> num_edges;
+  for (int k = 0; k < num_edges; k++)
+  {
+    int i, j;
+    cin >> i >> j;
+    neighbors[i].push_back(j);
+    neighbors[j].push_back(i);
+  }
+}
+```
+
+### Representação implicita de arestas
+
+Apesar do nome, nesse tipo de situação não representamos as arestas em nenhuma estrutura de dados, bastanto apenas representar os vértices do grafo.
+
+Esse é frequêntemente o caso em problemas em que trabalhamos com tabuleiros. Nesse tipo de problema, é comum que nosso meio de percorrer o grafo seja limitado em apenas se mover de uma determinada maneira tal que, estando em um dado vértice, só podemos nos movimentar para vértices pré-determinados.
