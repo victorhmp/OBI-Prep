@@ -23,14 +23,14 @@ void solve(int x, int y, int k)
     else
     {
         // Testar os quatro possíveis direções para o
-        // armário cair
+        // próximo passo no caminho
         for (int i = 0; i < 4; i++)
         {
-            // Se a posição está livre para o armário
+            // Se a posição está livre para o percorrer
             if (grid[x + dx[i]][y + dy[i]] == '.')
             {
-                // Marco essa posição como ocupada por um armário (caído)
-                grid[x + dx[i]][y + dy[i]] = '#';
+                // Marco essa posição como visitada
+                grid[x + dx[i]][y + dy[i]] = 'V';
 
                 // Chamo a função novamente, partindo da posição marcada
                 // sinalizando que um movimento foi feito
