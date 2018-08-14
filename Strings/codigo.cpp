@@ -8,11 +8,9 @@
 
 using namespace std;
 
-// Manter um unordered_set para todos os prefixos
-// já vistos.
+// Manter um unordered_set para todos os prefixos já vistos.
 unordered_set<string> prefix[MAXLEN + 1];
-// Manter um unordered_set para todos os sufixos
-// já vistos.
+// Manter um unordered_set para todos os sufixos já vistos.
 unordered_set<string> sufix[MAXLEN + 1];
 
 int N;
