@@ -61,6 +61,14 @@ else {
 
 ## Algoritmo alternativo
 
+Outro jeito de se encontrar uma ordenação topológica de um grafo é com uma variação do algoritmo de DFS. Basicamente, executamos uma DFS no vértice atual se este vértice não foi processado ainda. Sempre vamos manter 3 possíveis estados:
+
+1. Não processado
+2. Sendo processado
+3. Já processado
+
+Todos os vértices começam como não processados. Quando chegamos em um vértice pela primeira vez, seu estado é "Sendo processado", e depois que todos os seus vizinhos foi processado e acabamos a sua busca, ele passa a ser "Já processado". Dessa maneira, conseguimos encontrar uma possível ordenação topológica ou detectar um cíclo.
+
 ## Exercícios
 
 - https://olimpiada.ic.unicamp.br/pratique/p2/2011/f2/escalona/
