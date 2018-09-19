@@ -1,5 +1,11 @@
 # Ordenação Topológica
 
+Definição dada por Kahn, Arthur B. para "Topological Sorting", do seu artigo "Topological sorting of large networks":
+
+```
+A list in topological order has a special property. Simply expressed: proceeding from element to element along any path in the network, one passes through the list in one direction only
+```
+
 Uma ordenação topológica de um dado grafo _direcionado acíclico_ G é uma ordenação de seus vértices de tal forma que: para cada aresta u -> v, o vértice u aparece antes de v na ordenação. De forma mais abrangente, se existe um caminho partindo de um vértice A e terminando em um vértice B, então o vértice A aparece antes de B na ordenação topológica do grafo.
 
 É interessante reparar que **todo** grafo _acíclico_ possuí uma ordenação topológica, ao passo que, se o grafo possui um cíclo, não existe uma ordenação topológica tal grafo.
