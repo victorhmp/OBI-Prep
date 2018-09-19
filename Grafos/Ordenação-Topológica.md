@@ -72,3 +72,4 @@ Todos os vértices começam como não processados. Quando chegamos em um vértic
 ## Exercícios
 
 - https://olimpiada.ic.unicamp.br/pratique/p2/2011/f2/escalona/
+- https://br.spoj.com/problems/ORKUT/
