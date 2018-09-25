@@ -15,10 +15,10 @@ string baseB(int n, int b) {
   return (baseB(n / b, b) + symbols[n % b]);
 }
 
-int ini, ba;
+int ini, base;
 
 int main() {
-  scanf("%d %d", &ba, &ini);
+  scanf("%d %d", &base, &ini);
 
   cout << baseB(ini, base) << endl;
   return 0;
