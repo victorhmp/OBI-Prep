@@ -10,29 +10,29 @@
 - [J] Teorema de Pitágoras.
 - [J] Números primos.
 - [N1] Ponto, vetor, coordenadas no plano.
-- [N2] Aritimética modular básica: adição, subtração e multiplicação. [21] [30]
+- [N2] Aritimética modular básica: adição, subtração e multiplicação. [21][30]
 - [N2] Polígono (vértice, aresta, convexo, área).
 - [N2] Operacões com matrizes (adição, multiplicação e exponenciação).
 
 ## Conceitos básicos de matemática
 
 - Conceitos de grafos e árvores
-- [J] Arvóres e suas propriedades básicas, árvore enraizadas. [22] [23][38]
-- [J] Grafos direcionados e não direcionados. [22] [23] [38]
-- [J] Grau, caminho, ciclo, conectividade. [22] [23]
-- [N1] Grafos com pesos, cores ou classificações nas arestas ou vértices. [22] [35]
+- [J] Arvóres e suas propriedades básicas, árvore enraizadas. [22][23][38]
+- [J] Grafos direcionados e não direcionados. [22][23] [38]
+- [J] Grau, caminho, ciclo, conectividade. [22][23]
+- [N1] Grafos com pesos, cores ou classificações nas arestas ou vértices. [22][35]
 - [N2] Operações simples em inteiros de tamanho arbitrário. [41]
-- [N2] Algoritmos de força bruta e programção dinâmica com auxílio de máscaras de bits. [51] [52] [53]
+- [N2] Algoritmos de força bruta e programação dinâmica com auxílio de máscaras de bits. [51][52] [53]
 - [N2] Exponenciação de matrizes para resolver problemas de programação dinâmica. [54]
 - [S] Quickselect para achar o k-ésimo menor elemento. [55]
 
 ## Algoritmos em grafos
 
-- [J] Percorrer grafos com busca em largura e busca em profundidade. [38] [37]
-- [N1] Algoritmos de caminho mínimo (Dijkstra, Bellman-Ford, Floyd-Warshall). [46] [47]
+- [J] Percorrer grafos com busca em largura e busca em profundidade. [38][37]
+- [N1] Algoritmos de caminho mínimo (Dijkstra, Bellman-Ford, Floyd-Warshall). [46][47]
 - [N1] Encontrar componentes conexas.
-- [N1] Ordenação topológica. [42] [43]
-- [N1] Árvores geradoras mínimas. [48] [49]
+- [N1] Ordenação topológica. [42][43]
+- [N1] Árvores geradoras mínimas. [48][49]
 - [N2] Encontrar um caminho/ciclo de Euler. [50]
 - [S] Conjunto de arestas independentes em grafo bipartido (bipartite matching) em O(VE). [56]
 
@@ -48,7 +48,7 @@
 - [N1] Árvore de Fenwick (binary indexed tree) 1D. [65]
 - [N1] Menor ancestral comum: algoritmo para responder perguntas em O(logN). [66]
 - [N2] Árvore de Fenwick (binary indexed tree) 2D. [65]
-- [N2] Árvore de segmentos (Segment tree). [67] [68] [69]
+- [N2] Árvore de segmentos (Segment tree). [67][68] [69]
 - [S] Estruturas de dados persistentes.
 - [S] Divisão em buckets de tamanho √N (square root decomposition). [1]
 - [S] Árvores de busca binária balanceadas (Treaps, splay trees, etc). [70]
@@ -63,8 +63,8 @@
 - [N2] Compressão de coordenadas. [73]
 - [N2] Envoltória convexa (convex hull) em O(NlogN). [72]
 - [N2] Line sweep. [4]
-- [S] Calcular área de um polígono. [2] [72]
-- [S] Checar se um polígono contém um ponto. [3] [72]
+- [S] Calcular área de um polígono. [2][72]
+- [S] Checar se um polígono contém um ponto. [3][72]
 
 ## Referências
 
