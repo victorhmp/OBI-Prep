@@ -1,7 +1,8 @@
 // Knapsack Problem naive implementation (No DP)
 // O(2^n)
 
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <cstdio>
 using namespace std;
 
 int val[110], weight[110];
@@ -18,9 +19,9 @@ int knapsack(int cap, int n) {
 
   else {
     int including = val[n - 1] + knapsack(cap - weight[n - 1], n - 1);
-    int no_including = knapsack(cap, n - 1);
+    int not_including = knapsack(cap, n - 1);
 
-    return max(including, no_including);
+    return max(including, not_including);
   }
 }
 
