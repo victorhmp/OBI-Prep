@@ -126,28 +126,20 @@ Esse algoritmo usando P.D. é trivial de analisar e chegar no consumo de tempo O
 
 A solução para esse problema é muito similar ao problema de cortar hastes.
 
-Primeiro vamos definir a recursão que resolve o problema. Para contar o número total de soluções possíveis, podemos dividir o conjunto de soluções em dois:
-
-- Soluções que não contém moedas de valor `i`
-- Soluções sque contém ao menos uma moeda de valor `i`.
-
-Com isso vemos que, para cada moeda podemos tomar uma decisão: pegar a moeda `i`, fazendo com que o próximo estado seja `(i, target - val[i])`; não pegar a moeda, o que faz o próximo estado ser definido por `(i+1, target)`.
-
-Podemos escrever a função `count(s[], m, n)` que conta o número total de soluções como sendo igual a soma de `count(s[], m-1, n)` e `count(s[], m, n-val[i])`. Assim fica claro que o problema possui uma estrutura de subproblemas ótimos.
-
-Uma implementação utilizando Programação Dinâmica em C++ que resolve o problema proposto é a seguinte função:
-
 ```C++
-long long count(int i, int target) {
-  // Casos base
-  if (target < 0) return 0;
-  if (target == 0) return 1;
-  if (i > numCoins) return 0;
+int dp[MAX];
 
-  if (calculated[i][target] == false) {
-    table[i][target] = solve(i, target - c[i]) + solve(i + 1, target);
-    calculated[i][target] = true;
-  }
-  return table[i][target];
+int solve(int x, vector<int> &c){
+
+	if(x==0) return 1;
+
+	if(x<0) return 0;
+
+	if(dp[x]>=0) return dp[x];
+
+	for(int i=0;i<c.size();i++)
+		if(solve(x-c[i])) return dp[x-c[i]]=1;
+
+	return dp[x]=0;
 }
 ```
