@@ -112,3 +112,15 @@ int lcs(string X, int m, string Y, int n) {
 ```
 
 Quanto ao consumo de tempo do algoritmo usando programação dinâmica, fica fácil chegar em O(m \* n);
+
+## Desafio
+
+```
+Escreva uma função que recebe como parâmetros um inteiro n > 0 e um vetor que armazena uma sequência de n
+inteiros e devolve a soma de uma subsequência crescente da sequência dada de soma máxima. 
+
+Sua função deve consumir tempo O(n^2).
+```
+
+### Solução
+
