@@ -1,27 +1,34 @@
-#include <bits/stdc++.h>
+#include <cstdio>
 
-using namespace std;
+char resposta = 'N';
+int v, m;
+bool matriz[1010][100010];
+int moeda[1010];
 
-int c[52];
-int numCoins;
-long long table[52][252];
-bool calculated[52][252];
-long long solve(int i, int make) {
-  if (make < 0) return 0;
-  if (make == 0) return 1;
-  if (i > numCoins) return 0;
-  if (calculated[i][make] == false) {  // eliminating overlap
-    table[i][make] = solve(i, make - c[i]) + solve(i + 1, make);
-    calculated[i][make] = true;
+void busca(int coin, int soma) {
+  if (matriz[coin][soma]) return;
+
+  matriz[coin][soma] = 1;
+
+  if (soma == v) {
+    resposta = 'S';
+    return;
   }
-  return table[i][make];
+
+  if (coin > m || soma > v) return;
+
+  busca(coin + 1, soma + moeda[coin]);
+  busca(coin + 1, soma);
 }
+
 int main() {
-  int make;
-  cin >> make >> numCoins;
-  for (int i = 1; i <= numCoins; i++) {
-    cin >> c[i];
-  }
-  cout << solve(1, make) << endl;
+  scanf("%d %d", &v, &m);  // lemos os valores de v e m
+
+  for (int i = 1; i <= m; i++) scanf("%d", &moeda[i]);
+
+  busca(1, 0);
+
+  printf("%c\n", resposta);
+
   return 0;
 }
