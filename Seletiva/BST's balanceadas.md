@@ -1,6 +1,6 @@
 # Árvores de busca balanceadas
 
-De maneira bem intuitiva, árvores binárias de busca balanceadas são estruturas de dados que representam árvores binárias de busca, porém possuem métodos _internos_ para manterem-se balanceadas, em geral controlando a altura da árvore para garantir performance de pior caso.
+De maneira bem intuitiva, árvores binárias de busca balanceadas são estruturas de dados que representam árvores binárias de busca, além de possuírem métodos _internos_ para manterem-se balanceadas, em geral controlando a altura da árvore para garantir performance de pior caso.
 
 Vamos estudar rapidamente alguns exemplos de árvores de busca binária balanceadas, com atenção especial em como elas mantém sua estrutura balanceada após um número arbitrário de operações.
 
