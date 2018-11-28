@@ -80,22 +80,24 @@ Com as linhas _vermelhas_, conseguimos formar os triângulos `ABC`, `ACD` e `ADE
 Segue o trecho de código em c++ que implementa esse cálculo:
 
 ```c++
-int area = 0;
-int N = lengthof(p);
+double calcArea(const vector &p) {
+  int area = 0;
+  int N = p.size();
 
-//We will triangulate the polygon
-//into triangles with points p[0],p[i],p[i+1] 
+  //We will triangulate the polygon
+  //into triangles with points p[0],p[i],p[i+1] 
 
-for(int i = 1; i+1<N; i++){
-  int x1 = p[i][0] - p[0][0];
-  int y1 = p[i][1] - p[0][1];
-  int x2 = p[i+1][0] - p[0][0];
-  int y2 = p[i+1][1] - p[0][1];
-  int cross = (x1*y2) - (x2*y1);
-  area += cross;
+  for(int i = 1; i+1<N; i++){
+    int x1 = p[i][0] - p[0][0];
+    int y1 = p[i][1] - p[0][1];
+    int x2 = p[i+1][0] - p[0][0];
+    int y2 = p[i+1][1] - p[0][1];
+    int cross = (x1*y2) - (x2*y1);
+    area += cross;
+  }
+
+  return abs(area/2);
 }
-
-return abs(area/2);
 ```
 
 ## Intersecção de duas retas
@@ -138,3 +140,5 @@ Assim conseguimos as coordenadas do ponto de intersseção de ambas as retas.
 ## Convex Hull
 
 Primeiramente, vamos definir o que seria um _Convex Hull_ (envoltório convexo): um _convex hull_ de um conjunto de pontos é simplesmente o _menor_ polígono convexo que contém **todos** estes pontos.
+
+Leitura recomendada: https://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/
