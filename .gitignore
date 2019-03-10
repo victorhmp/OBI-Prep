@@ -1,5 +1,6 @@
 *.out
 *.o
+.DS_STORE
 
 .vscode/
 test.cpp
