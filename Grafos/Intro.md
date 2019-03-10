@@ -59,21 +59,18 @@ using namespace std;
 int matrix[N][N];
 
 // Recebe as arestas do grafo e monta a matriz de adjacência
-int main()
-{
+int main() {
   int num_edges = 0;
   cin >> num_edges;
-  for (int k = 0; k < num_edges; k++)
-  {
+
+  for (int k = 0; k < num_edges; k++) {
     int i, j;
     cin >> i >> j;
     matrix[i][j] = matrix[j][i] = 1;
   }
 
-  for (int i = 1; i <= N; i++)
-  {
-    for (int j = 1; j <= N; j++)
-    {
+  for (int i = 1; i <= N; i++) {
+    for (int j = 1; j <= N; j++) {
       cout << matrix[i][j];
       if (j == N)
         cout << "\n";
@@ -102,12 +99,10 @@ using namespace std;
 vector<int> neighbors[N];
 
 // Recebe as arestas do grafo e monta as listas de adjacência de cada vértice
-int main()
-{
+int main() {
   int num_edges = 0;
   cin >> num_edges;
-  for (int k = 0; k < num_edges; k++)
-  {
+  for (int k = 0; k < num_edges; k++) {
     int i, j;
     cin >> i >> j;
     neighbors[i].push_back(j);
@@ -121,3 +116,8 @@ int main()
 Apesar do nome, nesse tipo de situação não representamos as arestas em nenhuma estrutura de dados, bastanto apenas representar os vértices do grafo.
 
 Esse é frequêntemente o caso em problemas em que trabalhamos com tabuleiros. Nesse tipo de problema, é comum que nosso meio de percorrer o grafo seja limitado em apenas se mover de uma determinada maneira tal que, estando em um dado vértice, só podemos nos movimentar para vértices pré-determinados.
+
+### Exercícios
+
+- http://www.codcad.com/problem/118 (Tá ligado?)
+- http://www.codcad.com/problem/120 (Toca do Saci)
