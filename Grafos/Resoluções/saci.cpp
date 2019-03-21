@@ -7,7 +7,6 @@ int tab[MAXN][MAXN], vx[4] = {0,1,0,-1}, vy[4]={1,0,-1,0};
 int dist[MAXN][MAXN];
 
 void dfs(int i, int j){
-	// so possuo quatro possibiliades de movimento, logo:
 	for(int mov=0;k<4;k++){
 		int novo_i = i+vx[k];
 		int novo_j = j+vx[k];
