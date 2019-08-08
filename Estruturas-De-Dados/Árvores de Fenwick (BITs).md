@@ -64,7 +64,7 @@ Para implementar a operação `add(x, i)`, pensamos de maneira análoga: Se atul
 void add(int x, int i) {
   while(i <= N) {
     tree[i] += x;
-    i += (x & -x);
+    i += (i & -i);
   }
 }
 ```
