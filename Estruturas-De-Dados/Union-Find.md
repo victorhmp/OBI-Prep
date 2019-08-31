@@ -5,7 +5,7 @@ Union-Find é um nome comum para estruturas de dados que são capazes de represe
 Vamos considerar o seguinte problema para visualizar o uso da estrutura e quais suas propriedades.
 
 ```
-Em uma sala estão N pessoas. 
+Em uma sala estão N pessoas.
 Vamos definir duas pessoas como sendo amigos se estão conectados diretamente ou indiretamente.
 Se A é amigo de B, e B é amigo de C, então A também é amigo de C.
 Um grupo de amigos é um grupo de pessoas tal que quaisquer dois integrantes são amigos.
@@ -39,10 +39,10 @@ Vamos pensar em uma representação em _floresta_, ou seja, um conjunto de árvo
 
 Com isso em mente, escrevemos as funções em C++ da maneira mais otimizada:
 
-```
+```c++
 int pai[MAXN];
 
-int find(int x) { 
+int find(int x) {
     if(pai[x]==x) return x;
     return find(pai[x]);
 }
@@ -50,18 +50,18 @@ int find(int x) {
 void union(int x, int y) {
     x = find(x);
     y = find(y);
-    
+
     if(x == y) {
         return;
     }
-    
+
     if(peso[x] < peso[y]) {
         pai[x] = y;
     }
     if(peso[x] > peso[y]){
         pai[y] = x;
     }
-    
+
     if(peso[x] == peso[y]){
         pai[x] = y;
         peso[y]++;
